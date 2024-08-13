@@ -4,23 +4,24 @@
     "description": "A full-stack web application for managing real estate tasks such as staff hiring, branch management, and client registration.",
     "main": "server.js",
     "scripts": {
-      "start": "node server.js",
-      "dev": "nodemon server.js"
+        "start": "node server.js",
+        "dev": "nodemon server.js"
     },
     "keywords": [
-      "real-estate",
-      "staff-management",
-      "branch-management",
-      "client-management"
+        "real-estate",
+        "staff-management",
+        "branch-management",
+        "client-management"
     ],
     "author": "Engracia Batista, Fatima Elmi, Chin Bo Tu",
     "license": " ",
     "dependencies": {
-      "express": "^4.17.1",
-      "body-parser": "^1.19.0",
-      "oracledb": "^5.2.0"
+        "body-parser": "^1.20.2",
+        "dotenv": "^16.4.5",
+        "express": "^4.19.2",
+        "oracledb": "^5.5.0"
     },
     "devDependencies": {
-      "nodemon": "^2.0.7"
+        "nodemon": "^2.0.7"
     }
-  }
+}

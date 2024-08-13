@@ -12,6 +12,7 @@
   <div class="container">
     <h1>Dream Home Real Estate Application</h1>
     <form id="hireForm">
+      <label>Staff Number: <input type="text" name="staffNumber" required></label>
       <label>First Name: <input type="text" name="firstName" required></label>
       <label>Last Name: <input type="text" name="lastName" required></label>
       <label>Position: <input type="text" name="position" required></label>
@@ -22,7 +23,10 @@
       <label>Telephone: <input type="text" name="telephone" required></label>
       <label>Mobile: <input type="text" name="mobile" required></label>
       <label>Email: <input type="email" name="email" required></label>
-      <button type="submit">Hire Staff</button>
+      <div class="button-container">
+        <button type="submit">Hire Staff</button>
+        <button type="button" id="clearFormButton">Clear Form</button>
+      </div>
     </form>
     <div id="message"></div>
   </div>

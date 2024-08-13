@@ -39,8 +39,14 @@ input {
   margin-top: 4px;
 }
 
+.button-container {
+  display: flex;
+  gap: 10px; /* Add space between buttons */
+  margin-top: 10px; /* Add margin to separate buttons from input */
+}
+
 button {
-  padding: 10px;
+  padding: 6px 12px; /* Reduce padding to make buttons smaller */
   background-color: grey;
   color: white;
   border: none;
