@@ -11,14 +11,14 @@ app.use(express.static('public'));
 
 // Oracle DB connection configuration
 const dbConfig = {
-  user: 'yourUsername',
-  password: 'yourPassword',
-  connectString: 'yourConnectString'
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  connectString: process.env.DB_CONNECT_STRING
 };
 
 // Endpoint to hire a staff
 app.post('/hire-staff', async (req, res) => {
-  const { staffNo, firstName, lastName, position, branchNo, dob, salary, telephone, mobile, email } = req.body;
+  const { staffNo, fName, lName, position, sex, dob, salary, branchNo, telephone, mobile, email } = req.body;
 
   let connection;
   try {
@@ -26,9 +26,9 @@ app.post('/hire-staff', async (req, res) => {
 
     const result = await connection.execute(
       `BEGIN
-         staff_hire_sp(:staffNo, :firstName, :lastName, :position, :branchNo, :dob, :salary, :telephone, :mobile, :email);
+         staff_hire_sp(:staffNo, :fName, :lName, :position, :sex, :dob, :salary, :branchNo, :telephone, :mobile, :email);
        END;`,
-      { staffNo, firstName, lastName, position, branchNo, dob, salary, telephone, mobile, email },
+      { staffNo, fName, lName, position, sex, dob, salary, branchNo, telephone, mobile, email },
       { autoCommit: true }
     );
 

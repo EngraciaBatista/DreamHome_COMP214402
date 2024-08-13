@@ -1,18 +1,22 @@
--- PL/SQL Script - to be added in the SQL Database
 CREATE OR REPLACE PROCEDURE staff_hire_sp (
-  p_staffno IN VARCHAR2,
-  p_first_name IN VARCHAR2,
-  p_last_name IN VARCHAR2,
+  p_staffNo IN VARCHAR2,
+  p_fName IN VARCHAR2,
+  p_lName IN VARCHAR2,
   p_position IN VARCHAR2,
-  p_branchno IN VARCHAR2,
+  p_sex IN VARCHAR2,
   p_dob IN DATE,
   p_salary IN NUMBER,
+  p_branchNo IN VARCHAR2,
   p_telephone IN VARCHAR2,
   p_mobile IN VARCHAR2,
   p_email IN VARCHAR2
-) AS
+)
+IS
 BEGIN
-  INSERT INTO dh_staff (staffno, first_name, last_name, position, branchno, dob, salary, telephone, mobile, email)
-  VALUES (p_staffno, p_first_name, p_last_name, p_position, p_branchno, p_dob, p_salary, p_telephone, p_mobile, p_email);
+  INSERT INTO dh_staff (
+    staffNo, fName, lName, position, sex, dob, salary, branchNo, telephone, mobile, email
+  ) VALUES (
+    p_staffNo, p_fName, p_lName, p_position, p_sex, p_dob, p_salary, p_branchNo, p_telephone, p_mobile, p_email
+  );
   COMMIT;
-END;
+END staff_hire_sp;
