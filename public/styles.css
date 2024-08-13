@@ -1,64 +1,360 @@
-/* public/styles.css */
+/* styles.css */
+
+/* Horizontal navigation styles */
+.horizontal-nav {
+    list-style-type: none;
+    /* Remove list bullets */
+    margin: 0;
+    /* Remove margin */
+    padding: 0;
+    /* Remove padding */
+    width: 100%;
+    /* Make the navigation span the full width */
+    text-align: left;
+    font-family: Calibri;
+    background-color: rgb(241, 238, 233);
+}
+
+.horizontal-nav li:last-child {
+    margin-right: 0;
+    /* Remove margin from the last item to avoid extra spacing */
+}
+
+.horizontal-nav li {
+    display: inline;
+    /* Display list items horizontally */
+    margin-right: 5%;
+    /* Add spacing between navigation items */
+
+}
+
+.horizontal-nav a {
+    text-decoration: none;
+    /* Remove underlines from navigation links */
+    color: #020101;
+    /* Text color for navigation links */
+    font-weight: bold;
+    /* Set font weight to bold */
+    font-size: 16px;
+    /* Set font size for navigation links */
+}
+
+/* Generic Body format */
+
+.contained {
+    /* use in main */
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: black;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
+    margin: 0;
+    /* Remove margin from the body */
+    padding: 0;
+    /* Remove padding from the body */
+    font-family: Arial;
+    /* Set the font family for the entire page */
+    font-size: 14px;
+    /* Set the default font size */
+    line-height: 1.42857;
+    /* Set the line height */
+    color: #e7ebec;
+    /* Text color */
+    background-color: #050404;
+    /* Background color of the body */
+
 }
 
-img {
-  width: 25%; 
-  height: auto; 
-  display: block; 
-  margin-top: 20px; 
+.row-text {
+    border-bottom: 0px solid #da0f0f;
+    /* Add a bottom border with no width */
 }
 
+.row-text {
+    padding: 0.3rem 0;
+    /* Add padding to rows */
+}
+
+.col-xs-10 {
+    width: 83.33333%;
+    /* Set the width of a column to 83.33% */
+}
+
+.col-xs-offset-1 {
+    margin-left: 8.33333%;
+    /* Offset the left margin by 8.33% */
+}
+
+/* Margin utility classes */
+.margin-top-sm {
+    margin-top: .5em;
+    /* Add a small top margin */
+}
+
+.margin-top-md {
+    margin-top: 1em;
+    /* Add a medium top margin */
+}
+
+.margin-top-lg {
+    margin-top: 1.5em;
+    /* Add a large top margin */
+}
+
+.margin-top-xl {
+    margin-top: 3em;
+    /* Add an extra-large top margin */
+}
+
+.margin-top-xxl {
+    margin-top: 5em;
+    /* Add an extra-large top margin */
+}
+
+.margin-bottom-sm {
+    margin-bottom: .5em;
+    /* Add a small bottom margin */
+}
+
+.margin-bottom-md {
+    margin-bottom: 1em;
+    /* Add a medium bottom margin */
+}
+
+.margin-bottom-lg {
+    margin-bottom: 1.5em;
+    /* Add a large bottom margin */
+}
+
+.margin-bottom-xl {
+    margin-bottom: 3em;
+    /* Add an extra-large bottom margin */
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+small {
+    font-size: 80%;
+    /* Reduce the font size of small text */
+}
+
+/* Image alignment classes */
+
+.center-block {
+    /* centers images and video blocks */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.img-right-33 {
+    float: right;
+    /* Float an image to the right */
+    width: 33%;
+    /* Set the width of the image */
+    margin-left: 15px;
+    /* Add left margin to the image */
+}
+
+.img-right-50 {
+    float: right;
+    width: 50%;
+    margin-left: 15px;
+}
+
+.img-right-90 {
+    float: right;
+    width: 90%;
+    margin-left: 15px;
+}
+
+.img-right-20 {
+    float: right;
+    width: 20%;
+    margin-left: 15px;
+}
+
+.img-right-15 {
+    float: right;
+    width: 15%;
+    margin-left: 15px;
+}
+
+.img-left-33 {
+    float: left;
+    /* Float an image to the left */
+    width: 33%;
+    margin-right: 15px;
+    /* Add right margin to the image */
+}
+
+.img-left-50 {
+    float: left;
+    width: 50%;
+    margin-right: 15px;
+}
+
+.to_code {
+    background-color: rgb(229, 249, 249);
+}
+
+/* Container for the two columns */
 .container {
-  background: white;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  margin-top: 20px; /* Add margin to separate the container from the image */
+    display: flex;
+    justify-content: space-between;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
+/* Style for each column */
+.column {
+    flex-basis: 46%;
+    /* Adjust the width as needed */
+    background-color: rgba(49, 56, 63, 0.685);
+    padding: 1em;
+    border-radius: 10px;
 }
 
-label {
-  margin-bottom: 10px;
+.column2 {
+    flex-basis: 28%;
+    /* Adjust the width as needed */
+    background-color: rgba(14, 15, 16, 0.685);
+    padding: 1em;
+    border-radius: 10px;
 }
 
-input {
-  padding: 8px;
-  margin-top: 4px;
+/*block quotes*/
+.blockquote {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    font-size: 17.5px;
+    border-left: 5px solid rgb(132, 175, 209);
+    background-color: rgba(223, 234, 240, 0.685);
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
 }
 
-.button-container {
-  display: flex;
-  gap: 10px; /* Add space between buttons */
-  margin-top: 10px; /* Add margin to separate buttons from input */
+.small {
+    display: block;
+    font-size: 80%;
+    line-height: 1.42857;
+    color: #7f8397;
 }
 
-button {
-  padding: 6px 12px; /* Reduce padding to make buttons smaller */
-  background-color: grey;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+
+.banner {
+    text-align: center;
+    margin: 0;
+    /* Remove margin */
+    padding: 0;
+    /* Remove padding */
 }
 
-button:hover {
-  background-color: grey;
+.banner img {
+    max-width: 100%;
 }
 
-#message {
-  margin-top: 20px;
-  font-weight: bold;
+.header2 {
+    color: #f0eff0;
+    /* Text color inside the header */
+    padding: 0%;
+    /* Padding around the header content */
+    text-align: center;
+    /* Center-align text within the header */
+    width: 100%;
+    /* Make sure the header spans the full width */
+    background-color: rgb(0, 0, 0);
+   
+}
+
+.contained2 {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #080807;
+    padding: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.hr {
+    border-style: solid;
+    border-color: dimgray;
+    border-width: 1px;
+}
+
+/* Define styles for the text area */
+.scroll {
+    width: 100%;
+    max-width: 500px;
+    min-width: 300px;
+    /* Adjust width as needed */
+    height: 150px;
+    /* Adjust height as needed */
+    resize: none;
+    /* blocks vertical resizing */
+    overflow-y: scroll;
+    /* Enable vertical scrolling */
+    border: 1px solid #ccc;
+    /* Add a border for visibility */
+}
+
+
+.submit {
+    text-align: center;
+}
+
+.submit input[type="submit"],
+.submit input[type="reset"] {
+    background-color: #363636;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+ /* Unvisited links */
+ a {
+    color: blue;
+    text-decoration: none; /* Removes the underline by default */
+    transition: color 0.3s ease; /* Adds a transition effect to color changes */
+  }
+
+
+  /* Mouse over links */
+  a:hover {
+    color: rgb(116, 96, 42);
+    text-decoration: underline; /* Underline on hover */
+  }
+
+  /* Selected links */
+  a:active {
+    color: rgb(245, 236, 236);
+  }
+
+
+  table {
+    border-collapse: collapse;
+    margin: 20px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    
+margin-left: auto;
+margin-right: auto;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
 }

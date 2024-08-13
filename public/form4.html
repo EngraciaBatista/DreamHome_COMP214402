@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <section id="Headings" class="contained2">
+        <header class="header2">
+            <div>
+                <img src="./images/banner.JPG" alt="banner">
+            </div>
+            <h1 class="text-center">Wilson Homes Realtor</h1>
+            <nav>
+                <ul class="horizontal-nav text-center">
+                    <li><a rel="noopener" href="./index.html">Home</a></li>
+                    <li><a rel="noopener" href="./properties.html">Available Listings</a></li>
+                    <li><a rel="noopener" href="./form1.html">Form1</a></li>
+                    <li><a rel="noopener" href="./SiteMap.html">Site Map</a></li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+    <!--301368768 Chin Bo Tu -->
+    <main>
+        <section class="contained2">
+            <div class="row-text">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <h2 class="text-center">Contact Form</h2>
+                    <form action="mailto:mikewilson@example.com" method="post" enctype="text/plain">
+                        <p class="text-center">
+                            <label class="">First Name:</label>
+                            <input type="text" name="name" id="name">
+                            <label class="label-name">Last Name:</label>
+                            <input type="text" name="last" id="last">
+                            <label>Phone Number:</label>
+                            <input type="text" name="num" id="num">
+                        </p>
+                        <p class="text-center">
+                            <label class="label-name">Property Type:</label>
+                            <select name="type" id="type">
+                                <option>House</option>
+                                <option>Condo</option>
+                            </select>
+                            <label class="label-name">Bedrooms:</label>
+                            <select name="bed" id="bed">
+                                <option>1 - 2</option>
+                                <option>3 - 4</option>
+                                <option>5+</option>
+                            </select>
+                            <label class="label-name">Bathrooms:</label>
+                            <select name="bath" id="bath">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3+</option>
+                            </select>
+                        </p>
+                        <p class="text-center">
+                            What are the most <strong>Important features</strong> you are looking for in a property?
+                        </p>
+                        <textarea class="scroll center-block" name="message1" rows="10" cols="50"></textarea>
+                        <p class="text-center">
+                            What is the <strong>Budget</strong> we can work with?
+                        </p>
+                        <textarea class="scroll center-block" name="message2" rows="10" cols="50"></textarea>
+                        <p class="text-center">
+                            Other:
+                        </p>
+                        <textarea class="scroll center-block" name="message3" rows="10" cols="50"></textarea>
+                        <div class="submit">
+                            <input type="submit" value="Submit Form">
+                            <input type="reset" value="Reset Form">
+                            <p>Thank you! We pay attention to your feedback!</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section id="footer">
+            <div class="row-text">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <footer>
+                        <p class="small">&copy; Copyright Chin Bo Tu, Student Number: 301368768, Course: Comp 213,
+                            Semester:
+                            Fall 2023</p>
+                    </footer>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+    <title>staff update</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <section id="Headings" class="contained2">
+        <header class="header2">
+            <div>
+                <img src="./images/banner.JPG" alt="banner">
+            </div>
+            <h1 class="text-center">Dream Home</h1>
+            <nav>
+                <ul class="horizontal-nav text-center">
+                    <li><a rel="noopener" href="./index.html">Home</a></li>
+                    <li><a rel="noopener" href="./form1.html">Staff hiring form</a></li>
+                    <li><a rel="noopener" href="./form1_1.html">Staff Update form</a></li>
+                    <li><a rel="noopener" href="./form2.html">text</a></li>
+                    <li><a rel="noopener" href="./form3.html">client form</a></li>
+                    <li><a rel="noopener" href="./form3_2.html">client form</a></li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+    <main>
+        <section class="contained2">
+            <div class="row-text">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <h2 class="text-center">Select Staff Member</h2>
+            <p class="text-center">
+                <label for="staffDropdown">Select Staff:</label>
+                <select id="staffDropdown" onchange="populateTable(this.value)">
+                    <option value="">--Select Staff--</option>
+                    <!-- Options will be populated here from the database -->
+                </select>
+            </p>
+            <h2 class="text-center">Staff Details</h2>
+            <table id="staffTable" class="staff-table">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Salary</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data will be populated here based on selection -->
+                </tbody>
+            </table>
+                </div>
+            </div>
+        </section>
+        <section id="footer">
+            <div class="row-text">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <footer>
+                        <p class="small">&copy; Copyright  Course: Comp ,
+                            Semester: Fall 2023</p>
+                    </footer>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+</body>
+
+</html>

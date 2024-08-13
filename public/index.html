@@ -1,35 +1,84 @@
-<!-- public/index.html -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dream Home Real Estate Application</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+    <title>Dream Home</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <img src="Black White Minimalist Logo.png" alt="DreamHome - Database">
-  <div class="container">
-    <h1>Dream Home Real Estate Application</h1>
-    <form id="hireForm">
-      <label>Staff Number: <input type="text" name="staffNumber" required></label>
-      <label>First Name: <input type="text" name="firstName" required></label>
-      <label>Last Name: <input type="text" name="lastName" required></label>
-      <label>Position: <input type="text" name="position" required></label>
-      <label>Sex: <input type="text" name="sex" required></label>
-      <label>DOB: <input type="date" name="dob" required></label>
-      <label>Salary: <input type="number" name="salary" required></label>
-      <label>Branch No: <input type="text" name="branchNo" required></label>
-      <label>Telephone: <input type="text" name="telephone" required></label>
-      <label>Mobile: <input type="text" name="mobile" required></label>
-      <label>Email: <input type="email" name="email" required></label>
-      <div class="button-container">
-        <button type="submit">Hire Staff</button>
-        <button type="button" id="clearFormButton">Clear Form</button>
-      </div>
-    </form>
-    <div id="message"></div>
-  </div>
-  <script src="script.js"></script>
+    <section id="Headings" class="contained2">
+        <header class="header2">
+            <div>
+                <img src="./images/banner.JPG" alt="banner">
+            </div>
+
+            <h1 class="text-center">Dream Home Placeholder text</h1>
+            <nav>
+                <ul class="horizontal-nav text-center">
+                    <li><a rel="noopener" href="./index.html">Home</a></li>
+                    <li><a rel="noopener" href="./form1.html">Staff hiring form</a></li>
+                    <li><a rel="noopener" href="./form1_1.html">Staff Update form</a></li>
+                    <li><a rel="noopener" href="./form2.html">branch address</a></li>
+                    <li><a rel="noopener" href="./form3.html">client form</a></li>
+                    <li><a rel="noopener" href="./form3_2.html">client update</a></li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+
+    <main>
+        <section class="contained2">
+            <div class="row-text">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <h1 class="text-center">Homepage</h1>
+                    <div class="container">
+                        <div class="column">
+                            <h2 class="text-center">About Us</h2>
+                            <p>PlaceHolder Text about company</p>
+                            <p>More placeholder</p>
+                            <h2 class="text-center">Recent Listing:</h2>
+                            <iframe class="center-block" width="420" height="215"
+                                src="https://www.youtube.com/embed/3rmdfEUCqms?si=0e4bT-qzzSBlklc9"
+                                title="YouTube video player" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="column">
+                            <img src="./images/AgentPic3.png" class="img-responsive center-block"
+                                alt="image of agent">
+                            <p class="text-center"><strong>Michael Wilson</strong></p>
+                            <p class="text-center">Realtor, salesperson</p>
+                            <p class="text-center">Kitchener, Ontario</p>
+                            <p>&#x260E; 337-090-3096</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row-text">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <h2>Satisfied Customers</h2>
+                    <p class="blockquote">"Banger 1</p>
+                    <p class="blockquote">"Banger 2</p>
+                    <p class="blockquote">"Banger 3</p>
+                </div>
+            </div>
+        </section>
+        <div id="footer">
+            <div class="row-text">
+                <hr>
+                <div class="col-xs-10 col-xs-offset-1">
+                    <footer>
+                        <p class="small">&copy; Copyright Course: Comp,
+                            Semester:
+                            Summer 2024</p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
+
 </html>
