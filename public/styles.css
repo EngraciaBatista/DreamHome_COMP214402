@@ -1,7 +1,7 @@
 /* Global Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #bdbdbd;
     margin: 0;
     padding: 0;
     display: flex;
@@ -66,6 +66,7 @@ body {
     margin: 20px auto;
     padding: 20px;
     text-align: center;
+    
   }
   
   .container {
@@ -75,6 +76,7 @@ body {
     align-items: center;
     margin-top: 20px;
     width: 100%;
+    background-color: rgba(41, 29, 29, 0.2);
   }
   
   .column {
