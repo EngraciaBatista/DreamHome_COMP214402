@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale = 1.0">
-    <title>Staff form</title>
+    <title>Staff Hiring Form</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -12,64 +12,81 @@
     <section id="Headings" class="contained2">
         <header class="header2">
             <div>
-                <img src="./images/banner.JPG" alt="banner">
+                <img src="Black White Minimalist Logo.png" alt="Dream Home Real Estate">
             </div>
-            <h1 class="text-center">Dream Home</h1>
+            <h1 class="text-center">Welcome to DreamHome</h1>
             <nav>
                 <ul class="horizontal-nav text-center">
-                    <li><a rel="noopener" href="./index.html">Home</a></li>
-                    <li><a rel="noopener" href="./form1.html">Staff hiring form</a></li>
-                    <li><a rel="noopener" href="./form1_1.html">Staff Update form</a></li>
-                    <li><a rel="noopener" href="./form2.html">text</a></li>
-                    <li><a rel="noopener" href="./form3.html">client form</a></li>
-                    <li><a rel="noopener" href="./form3_2.html">client update</a></li>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./form1.html">Staff Hiring Form</a></li>
+                    <li><a href="./form1_1.html">Staff Update Form</a></li>
+                    <!--<li><a href="./form2.html">Branch Address</a></li>-->
+                    <li><a href="./form3.html">Client Form</a></li>
+                    <li><a href="./form3_2.html">Client Update</a></li>
                 </ul>
             </nav>
         </header>
     </section>
+
     <main>
         <section class="contained2">
             <div class="row-text">
                 <div class="col-xs-10 col-xs-offset-1">
                     <h2 class="text-center">Staff Hire Form</h2>
                     <form id="hireForm">
-                        <p class="text-center">
-                            <label class="">First Name:</label>
-                            <input type="text" name="name" id="name" required>
-                            <label class="label-name">Last Name:</label>
-                            <input type="text" name="last" id="last" required>
-                            <label class="label-name">Sex:</label>
-                            <select name="bath" id="bath" required>
-                                <option>M</option>
-                                <option>F</option>
+                        <p>
+                            <label for="staffNo">Staff Number:</label>
+                            <input type="text" name="staffNo" id="staffNo" required>
+                        </p>
+                        <p>
+                            <label for="fName">First Name:</label>
+                            <input type="text" name="fName" id="fName" required>
+                        </p>
+                        <p>
+                            <label for="lName">Last Name:</label>
+                            <input type="text" name="lName" id="lName" required>
+                        </p>
+                        <p>
+                            <label for="position">Position:</label>
+                            <input type="text" name="position" id="position" required>
+                        </p>
+                        <p>
+                            <label for="sex">Sex:</label>
+                            <select name="sex" id="sex" required>
+                                <option value="M">Male</option>
+                                <option value="F">Female</option>
                             </select>
-                            <label>Date of Birth:</label>
+                        </p>
+                        <p>
+                            <label for="dob">Date of Birth:</label>
                             <input type="date" name="dob" id="dob" required>
                         </p>
-                        <p class="text-center">
-                            <label>Email:</label>
-                            <input type="text" name="email" id="email" required>
+                        <p>
+                            <label for="salary">Salary:</label>
+                            <input type="number" name="salary" id="salary" required>
                         </p>
-                        <p class="text-center">
-                            <label>Tele:</label>
-                            <input type="text" name="tele" id="tele" required>
-                            <label>Mobile:</label>
+                        <p>
+                            <label for="branchNo">Branch Number:</label>
+                            <input type="text" name="branchNo" id="branchNo" required>
+                        </p>
+                        <p>
+                            <label for="telephone">Telephone:</label>
+                            <input type="text" name="telephone" id="telephone" required>
+                        </p>
+                        <p>
+                            <label for="mobile">Mobile:</label>
                             <input type="text" name="mobile" id="mobile">
                         </p>
-                        <p class="text-center">
-                            <label class="label-name">Branch #</label>
-                            <input type="text" name="branchNo" id="branchNo" required>
-                            <label class="">Position</label>
-                            <input type="text" name="position" id="position" required>
-                            <label class="label-name">Salary</label>
-                            <input type="text" name="salary" id="salary" required>
+                        <p>
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" id="email" required>
                         </p>
-                        <div class="submit">
-                            <button type="submit" value="Submit Form">Submit</button>
-                            <button type="reset" value="Reset Form">reset</button>
-                            <p>Thank you!</p>
+                        <div class="button-container">
+                            <button type="submit">Submit Form</button>
+                            <button type="reset">Reset Form</button>
                         </div>
                     </form>
+                    <div id="message"></div>
                 </div>
             </div>
         </section>
@@ -77,15 +94,16 @@
             <div class="row-text">
                 <div class="col-xs-10 col-xs-offset-1">
                     <footer>
-                        <p class="small">&copy; Copyright  Course: Comp ,
-                            Semester: Fall 2023</p>
+                        <p class="small">&copy; Copyright Course: COMP214 - Advanced Database Concepts - Semester: Summer 2024<br>
+                            Chin Bo Tu / Engracia Batista / Fatima Elmi
+                        </p>
                     </footer>
                 </div>
             </div>
         </section>
     </main>
 
-
+    <script src="script.js"></script>
 </body>
 
 </html>

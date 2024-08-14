@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale = 1.0">
-    <title>client update</title>
+    <title>Client Update Form</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -12,48 +12,71 @@
     <section id="Headings" class="contained2">
         <header class="header2">
             <div>
-                <img src="./images/banner.JPG" alt="banner">
+                <img src="Black White Minimalist Logo.png" alt="banner">
             </div>
-            <h1 class="text-center">Dream Home</h1>
+            <h1 class="text-center">Welcome to DreamHome</h1>
             <nav>
                 <ul class="horizontal-nav text-center">
-                    <li><a rel="noopener" href="./index.html">Home</a></li>
-                    <li><a rel="noopener" href="./form1.html">Staff hiring form</a></li>
-                    <li><a rel="noopener" href="./form1_1.html">Staff Update form</a></li>
-                    <li><a rel="noopener" href="./form2.html">text</a></li>
-                    <li><a rel="noopener" href="./form3.html">client form</a></li>
-                    <li><a rel="noopener" href="./form3_2.html">client update</a></li>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./form1.html">Staff Hiring Form</a></li>
+                    <li><a href="./form1_1.html">Staff Update Form</a></li>
+                    <!--<li><a href="./form2.html">Branch Address</a></li>-->
+                    <li><a href="./form3.html">Client Form</a></li>
+                    <li><a href="./form3_2.html">Client Update</a></li>
                 </ul>
             </nav>
         </header>
     </section>
+
     <main>
         <section class="contained2">
             <div class="row-text">
                 <div class="col-xs-10 col-xs-offset-1">
-                    <h2 class="text-center">Select client</h2>
-            <p class="text-center">
-                <label for="staffDropdown">Select client:</label>
-                <select id="staffDropdown" onchange="populateTable(this.value)">
-                    <option value="">--Select client--</option>
-                    <!-- Options will be populated here from the database -->
-                </select>
-            </p>
-            <h2 class="text-center">client Details</h2>
-            <table id="staffTable" class="staff-table">
-                <thead>
-                    <tr>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Email</th>
-                        <th>Phone</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Data will be populated here based on selection -->
-                </tbody>
-            </table>
+                    <h2 class="text-center">Select Client to Update</h2>
+                    <form id="updateClientForm">
+                       
+                        <p>
+                            <label for="clientNo">Client Number:</label>
+                            <input type="text" name="clientNo" id="clientNo" required>
+                        </p>
+                        <p>
+                            <label for="fName">First Name:</label>
+                            <input type="text" name="fName" id="fName">
+                        </p>
+                        <p>
+                            <label for="lName">Last Name:</label>
+                            <input type="text" name="lName" id="lName">
+                        </p>
+                        <p>
+                            <label for="telNo">Telephone:</label>
+                            <input type="text" name="telNo" id="telNo">
+                        </p>
+                        <p>
+                            <label for="street">Street:</label>
+                            <input type="text" name="street" id="street">
+                        </p>
+                        <p>
+                            <label for="city">City:</label>
+                            <input type="text" name="city" id="city">
+                        </p>
+                        <p>
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" id="email">
+                        </p>
+                        <p>
+                            <label for="prefType">Preferred Type:</label>
+                            <input type="text" name="prefType" id="prefType">
+                        </p>
+                        <p>
+                            <label for="maxRent">Maximum Rent:</label>
+                            <input type="number" name="maxRent" id="maxRent">
+                        </p>
+                        <div class="button-container">
+                            <button type="submit">Submit Form</button>
+                            <button type="reset">Reset Form</button>
+                        </div>
+                    </form>
+                    <div id="message"></div>
                 </div>
             </div>
         </section>
@@ -61,13 +84,16 @@
             <div class="row-text">
                 <div class="col-xs-10 col-xs-offset-1">
                     <footer>
-                        <p class="small">&copy; Copyright  Course: Comp ,
-                            Semester: Fall 2023</p>
+                        <p class="small">&copy; Copyright Course: COMP214 - Advanced Database Concepts - Semester: Summer 2024<br>
+                            Chin Bo Tu / Engracia Batista / Fatima Elmi
+                        </p>
                     </footer>
                 </div>
             </div>
         </section>
     </main>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
