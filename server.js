@@ -80,38 +80,9 @@ app.post('/update-staff', async (req, res) => {
   }
 });
 
-// Endpoint to get branch address by branch number
-app.post('/get-branch-address', async (req, res) => {
-  const { branchNo } = req.body;
 
-  let connection;
-  try {
-    connection = await oracledb.getConnection(dbConfig);
 
-    const result = await connection.execute(
-      `SELECT address FROM dh_branch WHERE branchNo = :branchNo`,
-      { branchNo }
-    );
-
-    if (result.rows.length > 0) {
-      res.status(200).json({ address: result.rows[0][0] });
-    } else {
-      res.status(404).json({ message: 'Branch not found' });
-    }
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  } finally {
-    if (connection) {
-      try {
-        await connection.close();
-      } catch (err) {
-        console.error(err);
-      }
-    }
-  }
-});
-
-// Endpoint to hire a client
+// Endpoint to register a new client
 app.post('/register-client', async (req, res) => {
   const { clientNo, fName, lName, telNo, street, city, email, prefType, maxRent } = req.body;
 
@@ -143,108 +114,34 @@ app.post('/register-client', async (req, res) => {
 
 // Endpoint to update a client
 app.post('/update-client', async (req, res) => {
-  const { clientNo, fName, lName, dob, sex, telephone, mobile, email } = req.body;
+  const { clientNo, fName, lName, telNo, street, city, email, prefType, maxRent } = req.body;
 
   let connection;
   try {
-    connection = await oracledb.getConnection(dbConfig);
+      connection = await oracledb.getConnection(dbConfig);
 
-    await connection.execute(
-      `BEGIN
-         client_update_sp(:clientNo, :fName, :lName, TO_DATE(:dob, 'YYYY-MM-DD'), :sex, :telephone, :mobile, :email);
-       END;`,
-      { clientNo, fName, lName, dob, sex, telephone, mobile, email },
-      { autoCommit: true }
-    );
+      await connection.execute(
+          `BEGIN
+              client_update_sp(:clientNo, :fName, :lName, :telNo, :street, :city, :email, :prefType, :maxRent);
+          END;`,
+          { clientNo, fName, lName, telNo, street, city, email, prefType, maxRent },
+          { autoCommit: true }
+      );
 
-    res.status(200).json({ message: 'Client updated successfully' });
+      res.status(200).json({ message: 'Client updated successfully' });
   } catch (err) {
-    res.status(500).json({ error: err.message });
+      res.status(500).json({ error: err.message });
   } finally {
-    if (connection) {
-      try {
-        await connection.close();
-      } catch (err) {
-        console.error(err);
+      if (connection) {
+          try {
+              await connection.close();
+          } catch (err) {
+              console.error(err);
+          }
       }
-    }
   }
 });
 
-// Endpoint to get staff details for a specific staff member (used in update form)
-app.get('/get-staff-details', async (req, res) => {
-  const { staffNo } = req.query;
-
-  let connection;
-  try {
-    connection = await oracledb.getConnection(dbConfig);
-
-    const result = await connection.execute(
-      `SELECT fName, lName, email, telephone, salary FROM dh_staff WHERE staffNo = :staffNo`,
-      { staffNo }
-    );
-
-    if (result.rows.length > 0) {
-      const staff = result.rows.map(row => ({
-        fName: row[0],
-        lName: row[1],
-        email: row[2],
-        telephone: row[3],
-        salary: row[4]
-      }));
-      res.status(200).json({ data: staff });
-    } else {
-      res.status(404).json({ message: 'Staff not found' });
-    }
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  } finally {
-    if (connection) {
-      try {
-        await connection.close();
-      } catch (err) {
-        console.error(err);
-      }
-    }
-  }
-});
-
-// Endpoint to get client details for a specific client (used in update form)
-app.get('/get-client-details', async (req, res) => {
-  const { clientNo } = req.query;
-
-  let connection;
-  try {
-    connection = await oracledb.getConnection(dbConfig);
-
-    const result = await connection.execute(
-      `SELECT fName, lName, email, telephone FROM dh_client WHERE clientNo = :clientNo`,
-      { clientNo }
-    );
-
-    if (result.rows.length > 0) {
-      const client = result.rows.map(row => ({
-        fName: row[0],
-        lName: row[1],
-        email: row[2],
-        telephone: row[3]
-      }));
-      res.status(200).json({ data: client });
-    } else {
-      res.status(404).json({ message: 'Client not found' });
-    }
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  } finally {
-    if (connection) {
-      try {
-        await connection.close();
-      } catch (err) {
-        console.error(err);
-      }
-    }
-  }
-});
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
